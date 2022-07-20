@@ -4,3 +4,4 @@ debug.log
 package.py
 publish-hashes.json
 .DS_Store
+.github/**
