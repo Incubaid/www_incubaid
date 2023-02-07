@@ -12,10 +12,10 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: www.incubaid.com
-        username: root
+        username: ${{ secrets.TF_USER }}
         key: ${{ secrets.TF_SECRET }}
-        port: 22
+        port: ${{ secrets.TF_PORT }}
         script: |
-          cd /opt/www_incubaid/
+          cd ~/websites/www_incubaid
           git log -1
           git pull
