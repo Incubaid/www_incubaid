@@ -11,11 +11,14 @@ jobs:
     - name: pushing latest change on www.incubaid.com
       uses: appleboy/ssh-action@master
       with:
-        host: www2.incubaid.com
+        host: www.incubaid.com
+        username: root
         username: ${{ secrets.TF_USER }}
         key: ${{ secrets.TF_SECRET }}
+        port: 22
         port: ${{ secrets.TF_PORT }}
         script: |
-          cd ~/websites/www2/www_incubaid
+          cd /opt/www_incubaid/
+          cd ~/websites/www_incubaid
           git log -1
           git pull
