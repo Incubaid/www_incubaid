@@ -18,7 +18,6 @@ jobs:
         port: 22
         port: ${{ secrets.TF_PORT }}
         script: |
-          cd /opt/www_incubaid/
           cd ~/websites/www_incubaid
           git log -1
           git pull
