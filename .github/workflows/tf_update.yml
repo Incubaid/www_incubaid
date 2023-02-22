@@ -1,14 +1,14 @@
 name: incubaid
 on: 
   push:
-    branch: [ development ]
+    branch: [ master ]
 
 jobs:
   job_one:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: pushing latest change on www2.incubaid.com
+    - name: pushing latest change on www.incubaid.com
       uses: appleboy/ssh-action@master
       with:
         host: www2.incubaid.com
